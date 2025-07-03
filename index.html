@@ -8,23 +8,29 @@
     body {
       background-color: #f4f6f8;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+      align-items: start;
+      min-height: 100vh;
     }
     .container {
       background-color: #fff;
       padding: 40px;
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      text-align: left;
       width: 90%;
       max-width: 600px;
+      margin-top: 50px;
     }
     h1 {
       color: #333;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    p.instructions {
+      font-weight: bold;
       margin-bottom: 20px;
       text-align: center;
     }
@@ -34,8 +40,9 @@
     .question p {
       font-weight: bold;
     }
-    .question input[type="radio"] {
-      margin-right: 10px;
+    .question label {
+      display: block;
+      margin-bottom: 8px;
     }
     button {
       width: 100%;
@@ -55,26 +62,29 @@
 <body>
   <div class="container">
     <h1>MMALINA EXAMS</h1>
-    <p><strong>Instructions:</strong> Confirm you are in either participating schools by answering these questions as we agreed in the meeting.</p>
+    <p class="instructions">Confirm you are in either school by answering these questions as we agreed in the meeting.</p>
     <form id="examForm">
       <div class="question">
         <p>1. What is the capital of Kenya?</p>
-         Mombasa</label><br />
-         Kisumu</label><br />
-         Nairobi</label><br />
+        <label><input type="radio" name="q1" value="mombasa"> Mombasa</label>
+        <label><input type="radio" name="q1" value="kisumu"> Kisumu</label>
+        <label><input type="radio" name="q1" value="nairobi"> Nairobi</label>
       </div>
+
       <div class="question">
         <p>2. Solve: 3x + 5 = 14. What is x?</p>
-         4</label><br />
-         3</label><br />
-         5</label><br />
+        <label><input type="radio" name="q2" value="4"> 4</label>
+        <label><input type="radio" name="q2" value="3"> 3</label>
+        <label><input type="radio" name="q2" value="5"> 5</label>
       </div>
+
       <div class="question">
         <p>3. What gas do plants use for photosynthesis?</p>
-         Oxygen</label><br />
-         Nitrogen</label><br />
-         Carbon Dioxide</label><br />
+        <label><input type="radio" name="q3" value="oxygen"> Oxygen</label>
+        <label><input type="radio" name="q3" value="nitrogen"> Nitrogen</label>
+        <label><input type="radio" name="q3" value="carbon"> Carbon Dioxide</label>
       </div>
+
       <button type="button" onclick="rickroll()">Submit Exam</button>
     </form>
   </div>
